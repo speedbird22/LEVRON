@@ -537,13 +537,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function extractFrames() {
+    let video;
     try {
-      const video = document.createElement('video');
+      video = document.createElement('video');
+      video.style.position = 'fixed';
+      video.style.top = '0';
+      video.style.left = '0';
+      video.style.width = '1px';
+      video.style.height = '1px';
+      video.style.opacity = '0.01';
+      video.style.pointerEvents = 'none';
       video.muted = true;
       video.playsInline = true;
-      video.crossOrigin = 'anonymous';
       video.preload = 'auto';
       video.src = VIDEO_URL;
+      document.body.appendChild(video); // Attach to DOM to force loading in iOS Safari power saving mode
       video.load(); // Explicit load call for iOS background load initialization
 
       await new Promise((resolve, reject) => {
@@ -592,8 +600,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       framesReady = true;
+      if (video && video.parentNode) {
+        video.parentNode.removeChild(video);
+      }
     } catch(e) {
       console.warn("Direct video scrubbing fallback active:", e.message || e);
+      if (video && video.parentNode) {
+        video.parentNode.removeChild(video);
+      }
       canvas.style.display = 'none';
       videoEl.style.display = 'block';
       videoEl.style.visibility = 'visible';
