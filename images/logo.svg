@@ -1,0 +1,43 @@
+<svg viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0D0" />
+      <stop offset="35%" stop-color="#DFAC6C" />
+      <stop offset="70%" stop-color="#C68B45" />
+      <stop offset="100%" stop-color="#8E5823" />
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&amp;display=swap');
+      .logo-txt {
+        font-family: 'Cinzel', serif;
+        font-size: 76px;
+        font-weight: 600;
+        fill: url(#gold-grad);
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </defs>
+  <!-- L E V R -->
+  <text x="10" y="76" class="logo-txt">LEVR</text>
+  <!-- O Crest (Symmetrical elegant gold leaf crest inside a serif O) -->
+  <g transform="translate(242, 10) scale(0.72)">
+    <!-- Serif O shape -->
+    <path d="M 50 8 C 27.4 8 9 26.8 9 50 C 9 73.2 27.4 92 50 92 C 72.6 92 91 73.2 91 50 C 91 26.8 72.6 8 50 8 Z M 50 11.5 C 32.3 11.5 18 28.7 18 50 C 18 71.3 32.3 88.5 50 88.5 C 67.7 88.5 82 71.3 82 50 C 82 28.7 67.7 11.5 50 11.5 Z" fill="url(#gold-grad)" fill-rule="evenodd" />
+    <!-- Symmetrical Premium Crest Inside -->
+    <!-- Top Leaf -->
+    <path d="M 50 20 C 52 28 52 40 50 44 C 48 40 48 28 50 20 Z" fill="url(#gold-grad)" />
+    <!-- Upper Pair -->
+    <path d="M 49 42 C 40 36 34 26 38 22 C 43 25 47 34 49 42 Z" fill="url(#gold-grad)" />
+    <path d="M 51 42 C 60 36 66 26 62 22 C 57 25 53 34 51 42 Z" fill="url(#gold-grad)" />
+    <!-- Middle Pair -->
+    <path d="M 49 54 C 38 48 30 38 34 33 C 39 37 45 46 49 54 Z" fill="url(#gold-grad)" />
+    <path d="M 51 54 C 62 48 70 38 66 33 C 61 37 55 46 51 54 Z" fill="url(#gold-grad)" />
+    <!-- Lower Pair -->
+    <path d="M 49 66 C 37 60 28 50 32 45 C 37 49 44 58 49 66 Z" fill="url(#gold-grad)" />
+    <path d="M 51 66 C 63 60 72 50 68 45 C 63 49 56 58 51 66 Z" fill="url(#gold-grad)" />
+    <!-- Stem -->
+    <path d="M 49.5 78 C 49.8 72 49.8 66 50 66 C 50.2 66 50.2 72 50.5 78 Z" fill="url(#gold-grad)" />
+  </g>
+  <!-- N -->
+  <text x="328" y="76" class="logo-txt">N</text>
+</svg>

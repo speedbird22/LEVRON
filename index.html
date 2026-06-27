@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEVRON Global Investments | Borderless Investments. Boundless Growth.</title>
+  <meta name="description"
+    content="Levron Global Investments is a DIFC-based global investment platform focused on strategic partnerships, cross-border opportunities, governance, and long-term value creation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-content">
+      <div class="levron-logo logo-lg" id="splashLogo">
+        <svg viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gold-grad-splash" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF0D0" />
+              <stop offset="35%" stop-color="#DFAC6C" />
+              <stop offset="70%" stop-color="#C68B45" />
+              <stop offset="100%" stop-color="#8E5823" />
+            </linearGradient>
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&amp;display=swap');
+
+              .logo-txt {
+                font-family: 'Cinzel', serif;
+                font-size: 76px;
+                font-weight: 600;
+                fill: url(#gold-grad-splash);
+                letter-spacing: 0.05em;
+              }
+            </style>
+          </defs>
+          <!-- L E V R -->
+          <text x="10" y="76" class="logo-txt">LEVR</text>
+          <!-- O Crest (Symmetrical elegant gold leaf crest inside a serif O) -->
+          <g transform="translate(242, 10) scale(0.72)">
+            <!-- Serif O shape -->
+            <path
+              d="M 50 8 C 27.4 8 9 26.8 9 50 C 9 73.2 27.4 92 50 92 C 72.6 92 91 73.2 91 50 C 91 26.8 72.6 8 50 8 Z M 50 11.5 C 32.3 11.5 18 28.7 18 50 C 18 71.3 32.3 88.5 50 88.5 C 67.7 88.5 82 71.3 82 50 C 82 28.7 67.7 11.5 50 11.5 Z"
+              fill="url(#gold-grad-splash)" fill-rule="evenodd" />
+            <!-- Symmetrical Premium Crest Inside -->
+            <!-- Top Leaf -->
+            <path d="M 50 20 C 52 28 52 40 50 44 C 48 40 48 28 50 20 Z" fill="url(#gold-grad-splash)" />
+            <!-- Upper Pair -->
+            <path d="M 49 42 C 40 36 34 26 38 22 C 43 25 47 34 49 42 Z" fill="url(#gold-grad-splash)" />
+            <path d="M 51 42 C 60 36 66 26 62 22 C 57 25 53 34 51 42 Z" fill="url(#gold-grad-splash)" />
+            <!-- Middle Pair -->
+            <path d="M 49 54 C 38 48 30 38 34 33 C 39 37 45 46 49 54 Z" fill="url(#gold-grad-splash)" />
+            <path d="M 51 54 C 62 48 70 38 66 33 C 61 37 55 46 51 54 Z" fill="url(#gold-grad-splash)" />
+            <!-- Lower Pair -->
+            <path d="M 49 66 C 37 60 28 50 32 45 C 37 49 44 58 49 66 Z" fill="url(#gold-grad-splash)" />
+            <path d="M 51 66 C 63 60 72 50 68 45 C 63 49 56 58 51 66 Z" fill="url(#gold-grad-splash)" />
+            <!-- Stem -->
+            <path d="M 49.5 78 C 49.8 72 49.8 66 50 66 C 50.2 66 50.2 72 50.5 78 Z" fill="url(#gold-grad-splash)" />
+          </g>
+          <!-- N -->
+          <text x="328" y="76" class="logo-txt">N</text>
+        </svg>
+      </div>
+      <div class="levron-tagline">Borderless Investments. Boundless Growth.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CURSOR ═══════════════ -->
+  <div class="cursor" id="cursor">
+    <svg id="flying-money" width="40" height="50" viewBox="-20 -25 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Parent group to apply the tilted angle of the money stack -->
+      <g id="money-wing-parent">
+        <!-- Money Stack (3D curved green cash stack, matching reference image) -->
+        <g class="money-stack-group">
+          <!-- Thickness edge (bottom/left 3D layers) -->
+          <path d="M -15 -16 C 0 -20 15 -16 15 -16 L 15 22 C 0 18 -15 22 -15 22 Z" fill="#2E7E4C" stroke="#1B4228" stroke-width="1.2" stroke-linejoin="round" />
+          <path d="M -15 -12 C 0 -16 15 -12 15 -12 L 15 24 C 0 20 -15 24 -15 24 Z" fill="#24643C" stroke="#1B4228" stroke-width="1.2" stroke-linejoin="round" />
+          <!-- Top bill face -->
+          <path d="M -15 -20 C 0 -24 15 -20 15 -20 L 15 20 C 0 16 -15 20 -15 20 Z" fill="#4CAF50" stroke="#1B4228" stroke-width="1.2" stroke-linejoin="round" />
+          <!-- Top bill inner border detail -->
+          <path d="M -12.5 -17.5 C 0 -21.5 12.5 -17.5 12.5 -17.5 L 12.5 17.5 C 0 13.5 -12.5 17.5 -12.5 17.5 Z" fill="none" stroke="#A9DFBF" stroke-width="0.75" stroke-dasharray="2 1.5" />
+          
+          <!-- Shaded strap side -->
+          <path d="M -15.5 5 L -15.5 9 C 0 5 15.5 9 15.5 9 L 15.5 5 Z" fill="#E6D7AD" stroke="#1B4228" stroke-width="1.2" />
+          <!-- Cream paper band strap -->
+          <path d="M -15.5 -7 C 0 -11 15.5 -7 15.5 -7 L 15.5 5 C 0 1 -15.5 5 -15.5 5 Z" fill="#FFF2CC" stroke="#1B4228" stroke-width="1.2" stroke-linejoin="round" />
+          
+          <!-- Large white dollar symbol on top face -->
+          <g transform="rotate(5)">
+            <text x="0" y="4" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle" style="user-select: none;">$</text>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Scroll video & particles background from flower.html -->
+  <div id="scroll-video-container">
+    <canvas id="video-canvas"></canvas>
+    <video id="video-fallback" muted playsinline preload="auto" crossorigin="anonymous"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260616_212935_bbf608da-62d1-4f25-9be4-c346e4d09cc8.mp4"></video>
+    <div class="overlay"></div>
+  </div>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ═══════════════ NAV MENU ═══════════════ -->
+  <nav class="nav-menu" id="navMenu" aria-hidden="true">
+    <div class="nav-menu__scroll">
+      <ul class="nav-menu__list">
+        <li><a href="#hero" class="nav-link is-active" data-close-menu>Home <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg></a></li>
+        <li><a href="#who-we-are" class="nav-link" data-close-menu>Who We Are<svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg></a></li>
+        <li><a href="#approach" class="nav-link" data-close-menu>Approach <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg></a></li>
+        <li><a href="#about" class="nav-link" data-close-menu>About Us <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg></a></li>
+        <li><a href="#platforms" class="nav-link" data-close-menu>Platforms <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg></a></li>
+        <li><a href="#governance" class="nav-link" data-close-menu>Governance<svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg></a></li>
+        <li><a href="#leadership" class="nav-link" data-close-menu>Leadership<svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg></a></li>
+      </ul>
+
+      <div class="nav-menu__footer">
+        <div class="nav-copy">
+          <p>©2026</p>
+          <p>Levron Global Investments, LLC.<br>All Rights Reserved.</p>
+        </div>
+        <div class="nav-contact">
+          <div class="nav-contact__inner">
+            <p>Interested in working with us?</p>
+            <a href="mailto:info@levronglobal.com">info@levronglobal.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HEADER (right side only) ═══════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-right">
+      <button class="header-contact-btn" id="contactBtn">
+        <span>Contact Us</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M7 17L17 7M17 7H7M17 7v10" />
+        </svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="burger">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="close-x" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4l12 12M16 4L4 16" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+  <div class="page-wrap" id="pageWrap">
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+      <canvas id="hero-bg-canvas"></canvas>
+      <div class="hero__content container">
+        <div class="hero__top" style="margin-left: 0; text-align: center; width: 100%;">
+          <div class="levron-logo logo-lg" id="heroLogo"
+            style="margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
+            <svg viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gold-grad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FFF0D0" />
+                  <stop offset="35%" stop-color="#DFAC6C" />
+                  <stop offset="70%" stop-color="#C68B45" />
+                  <stop offset="100%" stop-color="#8E5823" />
+                </linearGradient>
+                <style>
+                  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&amp;display=swap');
+
+                  .logo-txt {
+                    font-family: 'Cinzel', serif;
+                    font-size: 76px;
+                    font-weight: 600;
+                    fill: url(#gold-grad-hero);
+                    letter-spacing: 0.05em;
+                  }
+                </style>
+              </defs>
+              <!-- L E V R -->
+              <text x="10" y="76" class="logo-txt">LEVR</text>
+              <!-- O Crest (Symmetrical elegant gold leaf crest inside a serif O) -->
+              <g transform="translate(242, 10) scale(0.72)">
+                <!-- Serif O shape -->
+                <path
+                  d="M 50 8 C 27.4 8 9 26.8 9 50 C 9 73.2 27.4 92 50 92 C 72.6 92 91 73.2 91 50 C 91 26.8 72.6 8 50 8 Z M 50 11.5 C 32.3 11.5 18 28.7 18 50 C 18 71.3 32.3 88.5 50 88.5 C 67.7 88.5 82 71.3 82 50 C 82 28.7 67.7 11.5 50 11.5 Z"
+                  fill="url(#gold-grad-hero)" fill-rule="evenodd" />
+                <!-- Symmetrical Premium Crest Inside -->
+                <!-- Top Leaf -->
+                <path d="M 50 20 C 52 28 52 40 50 44 C 48 40 48 28 50 20 Z" fill="url(#gold-grad-hero)" />
+                <!-- Upper Pair -->
+                <path d="M 49 42 C 40 36 34 26 38 22 C 43 25 47 34 49 42 Z" fill="url(#gold-grad-hero)" />
+                <path d="M 51 42 C 60 36 66 26 62 22 C 57 25 53 34 51 42 Z" fill="url(#gold-grad-hero)" />
+                <!-- Middle Pair -->
+                <path d="M 49 54 C 38 48 30 38 34 33 C 39 37 45 46 49 54 Z" fill="url(#gold-grad-hero)" />
+                <path d="M 51 54 C 62 48 70 38 66 33 C 61 37 55 46 51 54 Z" fill="url(#gold-grad-hero)" />
+                <!-- Lower Pair -->
+                <path d="M 49 66 C 37 60 28 50 32 45 C 37 49 44 58 49 66 Z" fill="url(#gold-grad-hero)" />
+                <path d="M 51 66 C 63 60 72 50 68 45 C 63 49 56 58 51 66 Z" fill="url(#gold-grad-hero)" />
+                <!-- Stem -->
+                <path d="M 49.5 78 C 49.8 72 49.8 66 50 66 C 50.2 66 50.2 72 50.5 78 Z" fill="url(#gold-grad-hero)" />
+              </g>
+              <!-- N -->
+              <text x="328" y="76" class="logo-txt">N</text>
+            </svg>
+          </div>
+          <div class="levron-tagline" style="margin-bottom: 3.5rem;">Borderless Investments. Boundless Growth.</div>
+          <h2 class="hero__subtitle js-anim"
+            style="font-size: clamp(2rem, 3vw, 3.8rem); font-weight: 300; line-height: 1.3; max-width: 82rem; margin: 0 auto 3rem; color: rgba(255,255,255,0.85); --d:0.1s">
+            Connecting global capital with carefully curated opportunities through trust, transparency, and disciplined
+            execution.
+          </h2>
+          <p class="js-anim"
+            style="font-size: 1.55rem; color: rgba(255,255,255,0.55); max-width: 72rem; margin: 0 auto 4rem; line-height: 1.75; --d:0.2s">
+            Levron Global Investments is a Dubai-based investment platform established in the Dubai International
+            Financial Centre (DIFC). We focus on building strategic partnerships, identifying meaningful opportunities,
+            and creating long-term value across global markets.
+          </p>
+          <div class="js-anim" style="display: flex; gap: 2rem; justify-content: center; align-items: center; --d:0.3s">
+            <a href="#about" class="cta-btn-gold">
+              <span>Explore More</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+            <a href="#contact" class="link-arrow"
+              style="font-size: 1.5rem; text-decoration: underline; text-underline-offset: 4px;">
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <div class="hero__explore-more js-anim"
+          style="text-align: center; margin-top: auto; padding-top: 4rem; --d:0.4s">
+          <p
+            style="font-size: 1.3rem; color: rgba(255,255,255,0.35); margin-bottom: 1rem; letter-spacing: 0.1em; text-transform: uppercase;">
+            Scroll to view our process</p>
+          <div class="scroll-down-arrow" style="font-size: 2rem; color: rgba(255,255,255,0.35);">↓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SPACER / BLACK GAP SECTION ── -->
+    <section class="magic-intro-section" id="magicIntroSection"
+      style="height: 100vh; background: var(--black); display: flex; align-items: center; justify-content: center; position: relative; z-index: 5;">
+      <div class="container" style="text-align: center;">
+        <h2 class="js-reveal"
+          style="font-family: 'Cinzel', serif; font-size: clamp(2.4rem, 4.5vw, 4.2rem); font-weight: 300; color: rgba(255,255,255,0.85); max-width: 85rem; margin: 0 auto; line-height: 1.4;">
+          Here is our magic...
+        </h2>
+        <p class="js-reveal"
+          style="font-size: 1.6rem; color: rgba(255,255,255,0.45); max-width: 60rem; margin: 2rem auto 0; line-height: 1.6; font-family: 'Inter', sans-serif;">
+          Scroll down to explore how we connect capital with borderless growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── MAGIC SCROLL SECTION (flower animation + adaptive text overlays) ── -->
+    <section class="magic-scroll-section" id="magicScrollSection">
+      <div class="magic-scroll-sticky">
+        <div class="flower-overlay-container"
+          style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;">
+          <!-- Time-based text overlays that adapt to scroll speed -->
+          <div class="flower-overlay-text" id="flowerText1" style="top: 50%; left: 8%; text-align: left;">
+            <span class="flower-overlay-num">01</span>
+            <h3 class="flower-overlay-title">Connecting Global Capital</h3>
+            <p class="flower-overlay-desc">Bridging cross-border business and capital relationships from our DIFC
+              headquarters.</p>
+          </div>
+          <div class="flower-overlay-text" id="flowerText2"
+            style="top: 350%; right: 8%; transform: translateY(-50%); text-align: right;">
+            <span class="flower-overlay-num">03</span>
+            <h3 class="flower-overlay-title">Disciplined Evaluation</h3>
+            <p class="flower-overlay-desc">Rigorous, relationship-driven due diligence focused on governance and mutual
+              growth.</p>
+          </div>
+          <div class="flower-overlay-text" id="flowerText3"
+            style="top: 200%; left: 50%; transform: translateX(-50%); text-align: center;">
+            <span class="flower-overlay-num">02</span>
+            <h3 class="flower-overlay-title">Borderless Value Creation</h3>
+            <p class="flower-overlay-desc">Driving sustainable, long-term wealth across emerging sectors and global
+              markets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHO WE ARE ── -->
+    <section class="content-section bg-white" id="who-we-are">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num js-reveal">1:</div>
+          <div class="section-title-wrap">
+            <h2 class="section-title js-reveal">Who We Are</h2>
+            <span class="section-dot js-reveal" style="--d:0.15s">●</span>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="section-label-col">
+            <p class="label-tag js-reveal">About</p>
+            <h3 class="js-reveal" style="--d:0.1s">Profile:</h3>
+          </div>
+          <div class="section-content-col">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+            <p class="desc-tag js-reveal">Vision & Mandate</p>
+            <div class="ethos-text js-reveal" style="--d:0.1s">
+              <p>Levron Global Investments was founded with a vision to create a trusted platform that connects capital,
+                partnerships, and opportunities across borders.</p>
+              <p style="margin-top: 1.5rem; font-size: 1.7rem; color: rgba(255,255,255,0.7);">As markets become
+                increasingly interconnected, investors seek access to opportunities beyond geographical limitations.
+                Levron serves as a bridge between global capital and carefully evaluated opportunities through a
+                disciplined and relationship-driven approach.</p>
+              <p style="margin-top: 1.5rem; font-size: 1.7rem; color: rgba(255,255,255,0.7);">Headquartered in DIFC, one
+                of the world’s leading financial centres, we operate with a commitment to transparency, governance, and
+                long-term value creation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── APPROACH & CORE VALUES ── -->
+    <section class="content-section bg-white" id="approach">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num js-reveal">2:</div>
+          <div class="section-title-wrap">
+            <h2 class="section-title js-reveal">Our Approach</h2>
+            <span class="section-dot js-reveal" style="--d:0.15s">●</span>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="section-label-col">
+            <p class="label-tag js-reveal">Pillars</p>
+            <h3 class="js-reveal" style="--d:0.1s">Execution:</h3>
+          </div>
+          <div class="section-content-col">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+            <p class="desc-tag js-reveal">Core Values</p>
+
+            <div class="stats" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem;">
+              <div class="stat js-reveal" style="--d:0s; display: flex; flex-direction: column; padding: 2rem 0;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.8rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Clarity</div>
+                <div class="stat__info" style="margin-top: 1rem;">
+                  <p>We believe successful partnerships begin with transparency, simplicity, and clear communication.
+                  </p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+              <div class="stat js-reveal" style="--d:0.08s; display: flex; flex-direction: column; padding: 2rem 0;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.8rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Discipline</div>
+                <div class="stat__info" style="margin-top: 1rem;">
+                  <p>Every opportunity is evaluated through a structured, responsible, and thoughtful process.</p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+              <div class="stat js-reveal" style="--d:0.16s; display: flex; flex-direction: column; padding: 2rem 0;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.8rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Partnership</div>
+                <div class="stat__info" style="margin-top: 1rem;">
+                  <p>Strong relationships and aligned interests create sustainable, long-term success.</p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+              <div class="stat js-reveal" style="--d:0.24s; display: flex; flex-direction: column; padding: 2rem 0;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.8rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Execution</div>
+                <div class="stat__info" style="margin-top: 1rem;">
+                  <p>Ideas create possibilities. Disciplined, consistent execution creates tangible results.</p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT US & CORE VALUES ── -->
+    <section class="content-section bg-white" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num js-reveal">3:</div>
+          <div class="section-title-wrap">
+            <h2 class="section-title js-reveal">Our Story</h2>
+            <span class="section-dot js-reveal" style="--d:0.15s">●</span>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="section-label-col">
+            <p class="label-tag js-reveal">History</p>
+            <h3 class="js-reveal" style="--d:0.1s">Origins:</h3>
+          </div>
+          <div class="section-content-col">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+            <p class="desc-tag js-reveal">Bridging the Gap</p>
+            <div class="ethos-text js-reveal" style="--d:0.08s">
+              <p>Levron Global Investments was established to create a trusted platform for connecting capital with
+                opportunities across global markets.</p>
+              <p style="margin-top: 1.5rem; font-size: 1.6rem; color: rgba(255,255,255,0.65);">The world is becoming
+                increasingly connected. Capital moves across borders faster than ever before, yet access to high-quality
+                opportunities often remains fragmented. Levron was founded to bridge this gap.</p>
+              <p style="margin-top: 1.5rem; font-size: 1.6rem; color: rgba(255,255,255,0.65);">Operating from DIFC, we
+                focus on building relationships, identifying opportunities, and creating structures that support
+                long-term growth and sustainable value creation. Our objective is not simply to participate in
+                opportunities but to build meaningful partnerships that stand the test of time.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision & Mission Subsections -->
+        <div class="section-body" style="margin-top:0; border-top: none;">
+          <div class="section-label-col" style="border-top: none;">
+            <h3 class="js-reveal">Purpose:</h3>
+          </div>
+          <div class="section-content-col" style="border-top: none;">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+              <div class="js-reveal" style="--d:0s">
+                <h4 style="font-family: 'Cinzel', serif; font-size: 2.2rem; margin-bottom: 1rem; color: #FFF0D0;">Vision
+                </h4>
+                <p style="font-size: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.6;">To become a trusted global
+                  investment platform connecting capital with opportunities without geographical boundaries.</p>
+              </div>
+              <div class="js-reveal" style="--d:0.1s">
+                <h4 style="font-family: 'Cinzel', serif; font-size: 2.2rem; margin-bottom: 1rem; color: #FFF0D0;">
+                  Mission</h4>
+                <p style="font-size: 1.5rem; color: rgba(255,255,255,0.7); line-height: 1.6;">To create value through
+                  disciplined execution, strategic partnerships, and transparent business practices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INVESTMENT PLATFORMS (AREAS OF INTEREST) ── -->
+    <section class="content-section bg-gray" id="platforms">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num js-reveal">4:</div>
+          <div class="section-title-wrap">
+            <h2 class="section-title js-reveal">Platforms & Sectors</h2>
+            <span class="section-dot js-reveal" style="--d:0.15s">●</span>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="section-label-col">
+            <p class="label-tag js-reveal">Investments</p>
+            <h3 class="js-reveal" style="--d:0.1s">Sectors:</h3>
+          </div>
+          <div class="section-content-col">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+            <div class="portfolio-col-headers js-reveal">
+              <span>Platform Area</span><span>Focus Description</span>
+            </div>
+
+            <div class="portfolio-list" id="portfolioList">
+              <div class="p-row js-reveal" style="grid-template-columns: 1.2fr 2fr;"><span
+                  class="p-row__name">Alternative Investments</span><span class="p-row__desc">Exploring opportunities
+                  beyond traditional investment channels.</span><span class="p-row__line js-reveal"></span></div>
+              <div class="p-row js-reveal" style="grid-template-columns: 1.2fr 2fr;"><span class="p-row__name">Private
+                  Market Opportunities</span><span class="p-row__desc">Access to carefully evaluated private market
+                  opportunities.</span><span class="p-row__line js-reveal"></span></div>
+              <div class="p-row js-reveal" style="grid-template-columns: 1.2fr 2fr;"><span class="p-row__name">Strategic
+                  Capital Partnerships</span><span class="p-row__desc">Collaborating with institutions, HNWIs, and
+                  business leaders.</span><span class="p-row__line js-reveal"></span></div>
+              <div class="p-row js-reveal" style="grid-template-columns: 1.2fr 2fr;"><span
+                  class="p-row__name">Cross-Border Opportunities</span><span class="p-row__desc">Facilitating
+                  cross-border business and capital relationships.</span><span class="p-row__line js-reveal"></span>
+              </div>
+              <div class="p-row js-reveal" style="grid-template-columns: 1.2fr 2fr;"><span class="p-row__name">Emerging
+                  Growth Sectors</span><span class="p-row__desc">Identifying opportunities in sectors driven by
+                  long-term demand.</span><span class="p-row__line js-reveal"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GOVERNANCE & COMPLIANCE ── -->
+    <section class="content-section bg-white" id="governance">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num js-reveal">5:</div>
+          <div class="section-title-wrap">
+            <h2 class="section-title js-reveal">Governance</h2>
+            <span class="section-dot js-reveal" style="--d:0.15s">●</span>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="section-label-col">
+            <p class="label-tag js-reveal">Compliance</p>
+            <h3 class="js-reveal" style="--d:0.1s">Trust:</h3>
+          </div>
+          <div class="section-content-col">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+            <p class="desc-tag js-reveal">Built on Trust</p>
+            <div class="ethos-text js-reveal" style="--d:0.1s">
+              <p style="font-size: 2.2rem; line-height: 1.4; color: #FFF0D0; margin-bottom: 2rem;">Governance is central
+                to everything we do.</p>
+              <p style="font-size: 1.6rem; line-height: 1.7; color: rgba(255,255,255,0.7);">Levron is committed to
+                maintaining high standards of transparency, accountability, and professional conduct. We work alongside
+                experienced legal, financial, and business professionals to ensure disciplined decision-making and
+                responsible business practices.</p>
+              <p style="margin-top: 1.5rem; font-size: 1.6rem; line-height: 1.7; color: rgba(255,255,255,0.7);">Our
+                commitment is to create confidence through clarity, process, and integrity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LEADERSHIP ── -->
+    <section class="content-section bg-white" id="leadership">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num js-reveal">6:</div>
+          <div class="section-title-wrap">
+            <h2 class="section-title js-reveal">Our Leadership</h2>
+            <span class="section-dot js-reveal" style="--d:0.15s">●</span>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="section-label-col">
+            <p class="label-tag js-reveal">Directors</p>
+            <h3 class="js-reveal" style="--d:0.1s">Board:</h3>
+          </div>
+          <div class="section-content-col">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+            <p class="desc-tag js-reveal">Leadership Profiles</p>
+
+            <div class="stats" style="grid-template-columns: 1fr; gap: 3.5rem;">
+              <div class="stat js-reveal" style="--d:0s; grid-template-columns: 1fr 2fr; padding-bottom: 2rem;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.5rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Praneeth Reddy<br><span
+                    style="font-family: 'Inter', sans-serif; font-size: 1.4rem; color: rgba(255,255,255,0.5); font-weight: normal;">Director</span>
+                </div>
+                <div class="stat__info">
+                  <p style="font-size: 1.45rem; line-height: 1.7; color: rgba(255,255,255,0.75);">Praneeth is an
+                    entrepreneur, investor, and business leader with nearly two decades of experience across technology,
+                    real estate, investments, and business growth. He is the Co-Founder and Managing Director of Buloke
+                    Realty Ventures, a company that has facilitated over ₹800 crore in investment transactions while
+                    building a strong community of shareholders and strategic partners. At Levron, he leads the
+                    company’s vision, growth strategy, and global partnerships.</p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+
+              <div class="stat js-reveal" style="--d:0.08s; grid-template-columns: 1fr 2fr; padding-bottom: 2rem;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.5rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Shailesh Bhojak<br><span
+                    style="font-family: 'Inter', sans-serif; font-size: 1.4rem; color: rgba(255,255,255,0.5); font-weight: normal;">Director</span>
+                </div>
+                <div class="stat__info">
+                  <p style="font-size: 1.45rem; line-height: 1.7; color: rgba(255,255,255,0.75);">Shailesh brings
+                    extensive business leadership and relationship management expertise to Levron Global Investments. He
+                    plays a key role in strategic planning, stakeholder engagement, and business growth initiatives,
+                    supporting the company’s long-term objectives and partnership ecosystem.</p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+
+              <div class="stat js-reveal" style="--d:0.16s; grid-template-columns: 1fr 2fr; padding-bottom: 2rem;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.5rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Philipp Rulf<br><span
+                    style="font-family: 'Inter', sans-serif; font-size: 1.4rem; color: rgba(255,255,255,0.5); font-weight: normal;">Director
+                    – International Markets</span></div>
+                <div class="stat__info">
+                  <p style="font-size: 1.45rem; line-height: 1.7; color: rgba(255,255,255,0.75);">Philipp contributes
+                    international market expertise and cross-border business experience to Levron’s leadership team. His
+                    focus is on strengthening global relationships, developing strategic partnerships, and supporting
+                    international expansion initiatives.</p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+
+              <div class="stat js-reveal" style="--d:0.24s; grid-template-columns: 1fr 2fr; padding-bottom: 2rem;">
+                <div class="stat__num"
+                  style="font-family: 'Cinzel', serif; font-size: 2.5rem; background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  Dragan Killi Barda<br><span
+                    style="font-family: 'Inter', sans-serif; font-size: 1.4rem; color: rgba(255,255,255,0.5); font-weight: normal;">Director
+                    – Strategic Partnerships</span></div>
+                <div class="stat__info">
+                  <p style="font-size: 1.45rem; line-height: 1.7; color: rgba(255,255,255,0.75);">Dragan brings a global
+                    perspective and valuable experience in partnership development and international business
+                    relationships. He supports Levron’s mission of creating meaningful connections across markets while
+                    contributing to long-term growth and value creation.</p>
+                </div>
+                <span class="stat__line js-reveal"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CAPITAL PARTNERSHIPS & INSIGHTS ── -->
+    <section class="content-section bg-gray" id="partnerships">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num js-reveal">7:</div>
+          <div class="section-title-wrap">
+            <h2 class="section-title js-reveal">Partnerships</h2>
+            <span class="section-dot js-reveal" style="--d:0.15s">●</span>
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="section-label-col">
+            <p class="label-tag js-reveal">Capital</p>
+            <h3 class="js-reveal" style="--d:0.1s">Alliances:</h3>
+          </div>
+          <div class="section-content-col">
+            <span class="bar-v js-reveal"></span>
+            <span class="bar-h js-reveal"></span>
+            <p class="desc-tag js-reveal">We Work With</p>
+
+            <p style="font-size: 1.8rem; margin-bottom: 2rem; color: #FFF0D0;">Building Relationships That Create Value
+            </p>
+            <p style="font-size: 1.55rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 3rem;">Levron
+              believes successful investing is built on trust, alignment, and long-term thinking. We collaborate with
+              family offices, high-net-worth individuals, institutional participants, entrepreneurs, strategic business
+              partners, and international investors to deliver mutual value and sustainable growth.</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+              <ul
+                style="list-style: none; padding-left: 0; font-size: 1.5rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 1rem;">
+                <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: #DFAC6C;">●</span> Family
+                  Offices</li>
+                <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: #DFAC6C;">●</span>
+                  High-Net-Worth Individuals</li>
+                <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: #DFAC6C;">●</span>
+                  Institutional Participants</li>
+              </ul>
+              <ul
+                style="list-style: none; padding-left: 0; font-size: 1.5rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 1rem;">
+                <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: #DFAC6C;">●</span>
+                  Visionary Entrepreneurs</li>
+                <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: #DFAC6C;">●</span>
+                  Strategic Business Partners</li>
+                <li style="display: flex; align-items: center; gap: 1rem;"><span style="color: #DFAC6C;">●</span>
+                  International Investors</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ── FOOTER / CONTACT ── -->
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <div class="footer-logo">
+          <div class="levron-logo logo-md" style="margin-bottom: 1.5rem;">
+            <img src="images/logo.svg" alt="LEVRON">
+          </div>
+        </div>
+
+        <div class="footer-body"
+          style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4rem; display: grid;">
+          <div class="footer-cta">
+            <p style="font-family: 'Cinzel', serif; font-size: 2rem; color: #FFF0D0; margin-bottom: 1.5rem;">LEVRON
+              GLOBAL INVESTMENTS</p>
+            <p style="font-size: 1.4rem; color: rgba(255,255,255,0.45); margin-bottom: 0.8rem;">Interested in working
+              with us?</p>
+            <a href="mailto:info@levronglobal.com" class="footer-email">info@levronglobal.com</a>
+          </div>
+          <div class="footer-address" style="color: rgba(255,255,255,0.6); font-size: 1.4rem; line-height: 1.7;">
+            <p style="font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Dubai Office</p>
+            <p>Dubai International Financial Centre (DIFC)<br>Dubai, United Arab Emirates</p>
+          </div>
+        </div>
+
+        <div class="footer-disclaimer"
+          style="margin-top: 5rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.07); font-size: 1.2rem; color: rgba(255,255,255,0.3); line-height: 1.7;">
+          <p style="font-weight: bold; margin-bottom: 0.5rem; color: rgba(255,255,255,0.5);">DISCLAIMER</p>
+          <p>The information contained on this website is provided for general informational purposes only and does not
+            constitute investment advice, financial advice, legal advice, tax advice, or an offer to sell or a
+            solicitation of an offer to purchase any financial product, security, or investment. Levron Global
+            Investments does not guarantee the accuracy, completeness, or reliability of information contained on this
+            website. Visitors should seek independent professional advice before making any financial or investment
+            decisions. Any opportunities discussed are subject to applicable laws, regulations, and eligibility
+            requirements.</p>
+        </div>
+
+        <div class="footer-bottom"
+          style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.07);">
+          <p>©2026 Levron Global Investments. All Rights Reserved.</p>
+          <nav>
+            <a href="#who-we-are">Who We Are</a>
+            <a href="#approach">Approach</a>
+            <a href="#about">About</a>
+            <a href="#platforms">Platforms</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /.page-wrap -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
