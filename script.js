@@ -526,7 +526,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const particlesCanvas = document.getElementById('particles-canvas');
 
   function resizeCanvas() {
-    const dpr = isMobile ? 1 : Math.min(devicePixelRatio, 1.5);
+    // Utilize standard device pixel ratio (up to 2.0x) on mobile to render crisp Retina graphics
+    const dpr = Math.min(devicePixelRatio, 2.0);
     const w = Math.round(window.innerWidth * dpr);
     const h = Math.round(window.innerHeight * dpr);
     if (canvas.width !== w || canvas.height !== h) {
@@ -560,7 +561,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => reject(new Error("Timeout loading video metadata")), 15000);
       });
 
-      const maxW = isMobile ? 480 : 720;
+      // Increased frame resolution for crisp Retina display support
+      const maxW = isMobile ? 1080 : 1600;
       const scale = Math.min(1, maxW / video.videoWidth);
       const scaledWidth = Math.round(video.videoWidth * scale);
       const scaledHeight = Math.round(video.videoHeight * scale);
