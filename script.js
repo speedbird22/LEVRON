@@ -511,9 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const VIDEO_URL = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260616_212935_bbf608da-62d1-4f25-9be4-c346e4d09cc8.mp4';
   const canvas = document.getElementById('video-canvas');
   const videoEl = document.getElementById('video-fallback');
-  if (videoEl) {
-    videoEl.load(); // Force request buffer on mobile
-  }
   const ctx = canvas.getContext('2d', { alpha: false });
   let frames = [];
   let framesReady = false;
@@ -526,8 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const particlesCanvas = document.getElementById('particles-canvas');
 
   function resizeCanvas() {
-    // Utilize standard device pixel ratio (up to 2.0x) on mobile to render crisp Retina graphics
-    const dpr = Math.min(devicePixelRatio, 2.0);
+    const dpr = isMobile ? 1 : Math.min(devicePixelRatio, 1.5);
     const w = Math.round(window.innerWidth * dpr);
     const h = Math.round(window.innerHeight * dpr);
     if (canvas.width !== w || canvas.height !== h) {
@@ -538,22 +534,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function extractFrames() {
-    let video;
     try {
-      video = document.createElement('video');
-      video.style.position = 'fixed';
-      video.style.top = '0';
-      video.style.left = '0';
-      video.style.width = '1px';
-      video.style.height = '1px';
-      video.style.opacity = '0.01';
-      video.style.pointerEvents = 'none';
+      const video = document.createElement('video');
       video.muted = true;
       video.playsInline = true;
+      video.crossOrigin = 'anonymous';
       video.preload = 'auto';
       video.src = VIDEO_URL;
-      document.body.appendChild(video); // Attach to DOM to force loading in iOS Safari power saving mode
-      video.load(); // Explicit load call for iOS background load initialization
 
       await new Promise((resolve, reject) => {
         video.onloadedmetadata = () => resolve();
@@ -561,8 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => reject(new Error("Timeout loading video metadata")), 15000);
       });
 
-      // Increased frame resolution for crisp Retina display support
-      const maxW = isMobile ? 1080 : 1600;
+      const maxW = isMobile ? 480 : 720;
       const scale = Math.min(1, maxW / video.videoWidth);
       const scaledWidth = Math.round(video.videoWidth * scale);
       const scaledHeight = Math.round(video.videoHeight * scale);
@@ -578,38 +564,19 @@ document.addEventListener('DOMContentLoaded', () => {
           video.onerror = (e) => { video.removeEventListener('seeked', onSeeked); reject(e); };
           setTimeout(() => { video.removeEventListener('seeked', onSeeked); reject(new Error("Timeout seek")); }, 3000);
         });
-
-        // Frame extraction with lightweight Canvas fallback for Safari/iOS compatibility
-        let frameSource;
-        try {
-          frameSource = await createImageBitmap(video, { resizeWidth: scaledWidth, resizeHeight: scaledHeight });
-        } catch (bitmapErr) {
-          const frameCanvas = document.createElement('canvas');
-          frameCanvas.width = scaledWidth;
-          frameCanvas.height = scaledHeight;
-          const frameCtx = frameCanvas.getContext('2d');
-          frameCtx.drawImage(video, 0, 0, scaledWidth, scaledHeight);
-          frameSource = frameCanvas;
-        }
-        
-        frames.push(frameSource);
+        const bitmap = await createImageBitmap(video, { resizeWidth: scaledWidth, resizeHeight: scaledHeight });
+        frames.push(bitmap);
 
         if (i === 0) {
           canvas.style.visibility = 'visible';
           videoEl.style.display = 'none';
-          drawFrame(frameSource);
+          drawFrame(bitmap);
         }
       }
 
       framesReady = true;
-      if (video && video.parentNode) {
-        video.parentNode.removeChild(video);
-      }
     } catch(e) {
       console.warn("Direct video scrubbing fallback active:", e.message || e);
-      if (video && video.parentNode) {
-        video.parentNode.removeChild(video);
-      }
       canvas.style.display = 'none';
       videoEl.style.display = 'block';
       videoEl.style.visibility = 'visible';
@@ -747,7 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
               lastFrameIndex = idx;
               if (frames[idx]) drawFrame(frames[idx]);
             }
-          } else if (videoEl.duration && isFinite(videoEl.duration)) {
+          } else if (videoEl.duration && isFinite(videoEl.duration) && videoEl.readyState >= 1) {
             const target = progress * videoEl.duration;
             const now = performance.now();
             if (now - lastSeekTime > 50 && Math.abs(videoEl.currentTime - target) > 0.04) {
