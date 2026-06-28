@@ -128,6 +128,7 @@ body.c-hover #money-wing-parent {
 }
 #heroLogo {
   opacity: 0;
+  width: clamp(340px, 58vw, 520px);
 }
 
 .levron-tagline {
@@ -344,7 +345,7 @@ body.menu-open .close-x  { opacity: 1; transform: scale(1); }
 /* ── FLOWER.HTML BACKGROUND CODE ── */
 #scroll-video-container {
   position: fixed; inset: 0; z-index: -1;
-  background: #0a0a0a; top: -20%;
+  background: #0a0a0a;
   opacity: 0;
   visibility: hidden;
 }
@@ -422,7 +423,7 @@ body.menu-open .close-x  { opacity: 1; transform: scale(1); }
   opacity: 0;
   pointer-events: none;
   z-index: 9999;
-  max-width: 42rem;
+  max-width: 52rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -434,7 +435,7 @@ body.menu-open .close-x  { opacity: 1; transform: scale(1); }
 }
 .flower-overlay-num {
   font-family: 'Cinzel', serif;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(3.2rem, 6vw, 4.8rem);
   font-weight: 700;
   background: linear-gradient(135deg, #FFF0D0 0%, #DFAC6C 50%, #C68B45 100%);
   -webkit-background-clip: text;
@@ -443,7 +444,7 @@ body.menu-open .close-x  { opacity: 1; transform: scale(1); }
 }
 .flower-overlay-title {
   font-family: 'Cinzel', serif;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 500;
   color: #fff;
   letter-spacing: 0.02em;
@@ -451,10 +452,11 @@ body.menu-open .close-x  { opacity: 1; transform: scale(1); }
 }
 .flower-overlay-desc {
   font-family: 'Inter', sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
   line-height: 1.65;
   color: rgba(255,255,255,0.6);
 }
+
 
 /* ============================================================
    CONTENT SECTIONS

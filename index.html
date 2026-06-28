@@ -13,6 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
@@ -20,52 +21,7 @@
   <div class="splash-screen" id="splashScreen">
     <div class="splash-content">
       <div class="levron-logo logo-lg" id="splashLogo">
-        <svg viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="gold-grad-splash" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FFF0D0" />
-              <stop offset="35%" stop-color="#DFAC6C" />
-              <stop offset="70%" stop-color="#C68B45" />
-              <stop offset="100%" stop-color="#8E5823" />
-            </linearGradient>
-            <style>
-              @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&amp;display=swap');
-
-              .logo-txt {
-                font-family: 'Cinzel', serif;
-                font-size: 76px;
-                font-weight: 600;
-                fill: url(#gold-grad-splash);
-                letter-spacing: 0.05em;
-              }
-            </style>
-          </defs>
-          <!-- L E V R -->
-          <text x="10" y="76" class="logo-txt">LEVR</text>
-          <!-- O Crest (Symmetrical elegant gold leaf crest inside a serif O) -->
-          <g transform="translate(242, 10) scale(0.72)">
-            <!-- Serif O shape -->
-            <path
-              d="M 50 8 C 27.4 8 9 26.8 9 50 C 9 73.2 27.4 92 50 92 C 72.6 92 91 73.2 91 50 C 91 26.8 72.6 8 50 8 Z M 50 11.5 C 32.3 11.5 18 28.7 18 50 C 18 71.3 32.3 88.5 50 88.5 C 67.7 88.5 82 71.3 82 50 C 82 28.7 67.7 11.5 50 11.5 Z"
-              fill="url(#gold-grad-splash)" fill-rule="evenodd" />
-            <!-- Symmetrical Premium Crest Inside -->
-            <!-- Top Leaf -->
-            <path d="M 50 20 C 52 28 52 40 50 44 C 48 40 48 28 50 20 Z" fill="url(#gold-grad-splash)" />
-            <!-- Upper Pair -->
-            <path d="M 49 42 C 40 36 34 26 38 22 C 43 25 47 34 49 42 Z" fill="url(#gold-grad-splash)" />
-            <path d="M 51 42 C 60 36 66 26 62 22 C 57 25 53 34 51 42 Z" fill="url(#gold-grad-splash)" />
-            <!-- Middle Pair -->
-            <path d="M 49 54 C 38 48 30 38 34 33 C 39 37 45 46 49 54 Z" fill="url(#gold-grad-splash)" />
-            <path d="M 51 54 C 62 48 70 38 66 33 C 61 37 55 46 51 54 Z" fill="url(#gold-grad-splash)" />
-            <!-- Lower Pair -->
-            <path d="M 49 66 C 37 60 28 50 32 45 C 37 49 44 58 49 66 Z" fill="url(#gold-grad-splash)" />
-            <path d="M 51 66 C 63 60 72 50 68 45 C 63 49 56 58 51 66 Z" fill="url(#gold-grad-splash)" />
-            <!-- Stem -->
-            <path d="M 49.5 78 C 49.8 72 49.8 66 50 66 C 50.2 66 50.2 72 50.5 78 Z" fill="url(#gold-grad-splash)" />
-          </g>
-          <!-- N -->
-          <text x="328" y="76" class="logo-txt">N</text>
-        </svg>
+        <img src="images/logo.png" alt="LEVRON Logo">
       </div>
       <div class="levron-tagline">Borderless Investments. Boundless Growth.</div>
     </div>
@@ -112,7 +68,7 @@
   <div id="scroll-video-container">
     <canvas id="video-canvas"></canvas>
     <video id="video-fallback" muted playsinline preload="auto" crossorigin="anonymous"
-      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260616_212935_bbf608da-62d1-4f25-9be4-c346e4d09cc8.mp4"></video>
+      src="flower.mp4"></video>
     <div class="overlay"></div>
   </div>
 
@@ -199,52 +155,7 @@
         <div class="hero__top" style="margin-left: 0; text-align: center; width: 100%;">
           <div class="levron-logo logo-lg" id="heroLogo"
             style="margin-bottom: 1.5rem; margin-left: auto; margin-right: auto;">
-            <svg viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="gold-grad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#FFF0D0" />
-                  <stop offset="35%" stop-color="#DFAC6C" />
-                  <stop offset="70%" stop-color="#C68B45" />
-                  <stop offset="100%" stop-color="#8E5823" />
-                </linearGradient>
-                <style>
-                  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&amp;display=swap');
-
-                  .logo-txt {
-                    font-family: 'Cinzel', serif;
-                    font-size: 76px;
-                    font-weight: 600;
-                    fill: url(#gold-grad-hero);
-                    letter-spacing: 0.05em;
-                  }
-                </style>
-              </defs>
-              <!-- L E V R -->
-              <text x="10" y="76" class="logo-txt">LEVR</text>
-              <!-- O Crest (Symmetrical elegant gold leaf crest inside a serif O) -->
-              <g transform="translate(242, 10) scale(0.72)">
-                <!-- Serif O shape -->
-                <path
-                  d="M 50 8 C 27.4 8 9 26.8 9 50 C 9 73.2 27.4 92 50 92 C 72.6 92 91 73.2 91 50 C 91 26.8 72.6 8 50 8 Z M 50 11.5 C 32.3 11.5 18 28.7 18 50 C 18 71.3 32.3 88.5 50 88.5 C 67.7 88.5 82 71.3 82 50 C 82 28.7 67.7 11.5 50 11.5 Z"
-                  fill="url(#gold-grad-hero)" fill-rule="evenodd" />
-                <!-- Symmetrical Premium Crest Inside -->
-                <!-- Top Leaf -->
-                <path d="M 50 20 C 52 28 52 40 50 44 C 48 40 48 28 50 20 Z" fill="url(#gold-grad-hero)" />
-                <!-- Upper Pair -->
-                <path d="M 49 42 C 40 36 34 26 38 22 C 43 25 47 34 49 42 Z" fill="url(#gold-grad-hero)" />
-                <path d="M 51 42 C 60 36 66 26 62 22 C 57 25 53 34 51 42 Z" fill="url(#gold-grad-hero)" />
-                <!-- Middle Pair -->
-                <path d="M 49 54 C 38 48 30 38 34 33 C 39 37 45 46 49 54 Z" fill="url(#gold-grad-hero)" />
-                <path d="M 51 54 C 62 48 70 38 66 33 C 61 37 55 46 51 54 Z" fill="url(#gold-grad-hero)" />
-                <!-- Lower Pair -->
-                <path d="M 49 66 C 37 60 28 50 32 45 C 37 49 44 58 49 66 Z" fill="url(#gold-grad-hero)" />
-                <path d="M 51 66 C 63 60 72 50 68 45 C 63 49 56 58 51 66 Z" fill="url(#gold-grad-hero)" />
-                <!-- Stem -->
-                <path d="M 49.5 78 C 49.8 72 49.8 66 50 66 C 50.2 66 50.2 72 50.5 78 Z" fill="url(#gold-grad-hero)" />
-              </g>
-              <!-- N -->
-              <text x="328" y="76" class="logo-txt">N</text>
-            </svg>
+            <img src="images/logo.png" alt="LEVRON Logo">
           </div>
           <div class="levron-tagline" style="margin-bottom: 3.5rem;">Borderless Investments. Boundless Growth.</div>
           <h2 class="hero__subtitle js-anim"
@@ -716,7 +627,7 @@
       <div class="container">
         <div class="footer-logo">
           <div class="levron-logo logo-md" style="margin-bottom: 1.5rem;">
-            <img src="images/logo.svg" alt="LEVRON">
+            <img src="images/logo.png" alt="LEVRON">
           </div>
         </div>
 

@@ -58,8 +58,12 @@ function initHeroBackground() {
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
+  const dpr = window.devicePixelRatio || 1;
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+  ctx.scale(dpr, dpr);
   
   let isVisible = true;
   const heroSection = document.getElementById('hero');
@@ -182,8 +186,13 @@ function initHeroBackground() {
   function resize() {
     const prevW = width;
     const prevH = height;
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
     
     const sizeFactor = Math.min(1, width / 1200);
     
@@ -508,7 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const isMobile = window.innerWidth < 768;
 
   // ===================== SCROLL VIDEO =====================
-  const VIDEO_URL = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260616_212935_bbf608da-62d1-4f25-9be4-c346e4d09cc8.mp4';
+  const VIDEO_URL = 'flower.mp4';
   const canvas = document.getElementById('video-canvas');
   const videoEl = document.getElementById('video-fallback');
   const ctx = canvas.getContext('2d', { alpha: false });
@@ -523,7 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const particlesCanvas = document.getElementById('particles-canvas');
 
   function resizeCanvas() {
-    const dpr = isMobile ? 1 : Math.min(devicePixelRatio, 1.5);
+    const dpr = isMobile ? 1 : Math.min(devicePixelRatio, 2.0);
     const w = Math.round(window.innerWidth * dpr);
     const h = Math.round(window.innerHeight * dpr);
     if (canvas.width !== w || canvas.height !== h) {
@@ -548,7 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => reject(new Error("Timeout loading video metadata")), 15000);
       });
 
-      const maxW = isMobile ? 480 : 720;
+      const maxW = isMobile ? 720 : 1920;
       const scale = Math.min(1, maxW / video.videoWidth);
       const scaledWidth = Math.round(video.videoWidth * scale);
       const scaledHeight = Math.round(video.videoHeight * scale);
@@ -564,7 +573,7 @@ document.addEventListener('DOMContentLoaded', () => {
           video.onerror = (e) => { video.removeEventListener('seeked', onSeeked); reject(e); };
           setTimeout(() => { video.removeEventListener('seeked', onSeeked); reject(new Error("Timeout seek")); }, 3000);
         });
-        const bitmap = await createImageBitmap(video, { resizeWidth: scaledWidth, resizeHeight: scaledHeight });
+        const bitmap = await createImageBitmap(video);
         frames.push(bitmap);
 
         if (i === 0) {
@@ -587,6 +596,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const cw = canvas.width, ch = canvas.height;
     const s = Math.max(cw / frame.width, ch / frame.height);
     const dw = frame.width * s, dh = frame.height * s;
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(frame, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
   }
 
@@ -793,20 +804,26 @@ document.addEventListener('DOMContentLoaded', () => {
   let particles = [];
   let pRaf;
 
+  let pLayoutWidth = window.innerWidth;
+  let pLayoutHeight = window.innerHeight;
+
   function resizeParticles() {
-    pCanvas.width = window.innerWidth;
-    pCanvas.height = window.innerHeight;
+    const dpr = isMobile ? 1 : Math.min(devicePixelRatio, 2.0);
+    pLayoutWidth = window.innerWidth;
+    pLayoutHeight = window.innerHeight;
+    pCanvas.width = pLayoutWidth * dpr;
+    pCanvas.height = pLayoutHeight * dpr;
     createParticles();
   }
 
   function createParticles() {
     particles = [];
     const divisor = isMobile ? 25000 : 18000;
-    const count = Math.floor((pCanvas.width * pCanvas.height) / divisor);
+    const count = Math.floor((pLayoutWidth * pLayoutHeight) / divisor);
     for (let i = 0; i < count; i++) {
       particles.push({
-        x: Math.random() * pCanvas.width,
-        y: Math.random() * pCanvas.height,
+        x: Math.random() * pLayoutWidth,
+        y: Math.random() * pLayoutHeight,
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
         size: Math.random() * 1.5 + 0.5,
@@ -816,15 +833,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function animateParticles() {
+    const dpr = isMobile ? 1 : Math.min(devicePixelRatio, 2.0);
     pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
     for (const p of particles) {
       p.x += p.vx; p.y += p.vy;
-      if (p.x < 0) p.x = pCanvas.width;
-      if (p.x > pCanvas.width) p.x = 0;
-      if (p.y < 0) p.y = pCanvas.height;
-      if (p.y > pCanvas.height) p.y = 0;
+      if (p.x < 0) p.x = pLayoutWidth;
+      if (p.x > pLayoutWidth) p.x = 0;
+      if (p.y < 0) p.y = pLayoutHeight;
+      if (p.y > pLayoutHeight) p.y = 0;
       pCtx.beginPath();
-      pCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      pCtx.arc(p.x * dpr, p.y * dpr, p.size * dpr, 0, Math.PI * 2);
       pCtx.fillStyle = `rgba(255,255,255,${p.opacity})`;
       pCtx.fill();
     }
